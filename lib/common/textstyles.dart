@@ -6,8 +6,8 @@ const text1 =
     TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: whitecolor);
 const text2 =
     TextStyle(fontSize: 15, color: goldcolor, fontWeight: FontWeight.bold);
-const text3 =
-    TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: blackcolor);
+const empname =
+    TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: blackcolor);
 const text4 =
     TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: whitecolor);
 const text5 =
