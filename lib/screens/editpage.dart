@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:exactus_task/common/sizedbox.dart';
-import 'package:exactus_task/common/url.dart';
+import 'package:exactus_task/connect/url.dart';
 import 'package:exactus_task/screens/homepage.dart';
 import 'package:exactus_task/validation/validators.dart';
 import 'package:flutter/material.dart';

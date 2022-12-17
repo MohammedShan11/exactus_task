@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
 import '../common/sizedbox.dart';
-import '../common/url.dart';
+import '../connect/url.dart';
 import '../validation/validators.dart';
 
 class AddEmployee extends StatefulWidget {

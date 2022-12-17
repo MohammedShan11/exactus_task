@@ -8,7 +8,7 @@ import 'package:exactus_task/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
-import '../../common/url.dart';
+import '../../connect/url.dart';
 import '../../validation/validators.dart';
 
 class LoginPage extends StatefulWidget {

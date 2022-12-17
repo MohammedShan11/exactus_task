@@ -7,7 +7,7 @@ import 'package:exactus_task/screens/editpage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
-import '../common/url.dart';
+import '../connect/url.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
