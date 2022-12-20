@@ -1,4 +1,6 @@
+import 'package:exactus_task/screens/auth/loginpage.dart';
 import 'package:exactus_task/screens/homepage.dart';
+import 'package:exactus_task/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,8 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplashScreen(),
       //LoginPage(),
+      //HomePage(),
     );
   }
 }

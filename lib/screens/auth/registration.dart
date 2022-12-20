@@ -21,6 +21,7 @@ class _RegisterPageState extends State<RegisterPage> {
   var addressController = TextEditingController();
   var countryController = TextEditingController();
   var numberController = TextEditingController();
+  var passwordController = TextEditingController();
 
   Future<void> onRegister() async {
     var data = {
@@ -29,6 +30,7 @@ class _RegisterPageState extends State<RegisterPage> {
       "email": emailController.text,
       "country": countryController.text,
       "phone": numberController.text,
+      "password": passwordController.text,
     };
     var response = await post(Uri.parse('${url}register.php'), body: data);
     print(response.body);
@@ -43,6 +45,9 @@ class _RegisterPageState extends State<RegisterPage> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
+          decoration: BoxDecoration(
+          gradient: lightlinear,
+        ),
           child: SingleChildScrollView(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -51,6 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
+                        sbh40,
                         Text(
                           "REGISTER",
                           style: TextStyle(
@@ -190,6 +196,35 @@ class _RegisterPageState extends State<RegisterPage> {
                                 ),
                                 fillColor: Colors.grey[200],
                                 filled: true),
+                          ),
+                        ),
+                        sbh10,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: TextFormField(
+                            keyboardType: TextInputType.text,
+                            validator: (value) {
+                              return Validate.passwordValidator(value!);
+                            },
+                            controller: passwordController,
+                            decoration: InputDecoration(
+                                prefixIcon: Icon(
+                                  Icons.password_outlined,
+                                ),
+                                hintText: "Password",
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.deepPurple),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                fillColor: Colors.grey[200],
+                                filled: true),
+                            obscureText: true,
+                            obscuringCharacter: "*",
                           ),
                         ),
                         sbh10,

@@ -43,4 +43,12 @@ class Validate {
       return null;
     }
   }
+
+  static String? passwordValidator(String value) {
+    if (value.length < 8 || num.tryParse(value) == null) {
+      return 'Password should contain atleast 8 digits';
+    } else {
+      return null;
+    }
+  }
 }

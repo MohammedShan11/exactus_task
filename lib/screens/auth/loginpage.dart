@@ -21,10 +21,12 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   var loginKey = GlobalKey<FormState>();
   var emailController = TextEditingController();
+  var passwordController = TextEditingController();
 
   Future<void> onLogin() async {
     var data = {
       "email": emailController.text,
+      "password": passwordController.text
     };
     var response = await post(Uri.parse('${url}login.php'), body: data);
     print(response.body);
@@ -39,8 +41,8 @@ class _LoginPageState extends State<LoginPage> {
         snackbar("Login Successful", Colors.green);
       } else {
         snackbar("Login Failed", Colors.red);
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+        // Navigator.push(
+        //     context, MaterialPageRoute(builder: (context) => LoginPage()));
       }
     }
   }
@@ -49,10 +51,12 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: grey300,
         body: Container(
           height: double.infinity,
           width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: lightlinear,
+          ),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             const Text(
               "LOGIN",
@@ -85,6 +89,34 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             fillColor: Colors.grey[200],
                             filled: true),
+                      ),
+                    ),
+                    sbh10,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: TextFormField(
+                        keyboardType: TextInputType.number,
+                        validator: (value) {
+                          return Validate.passwordValidator(value!);
+                        },
+                        controller: passwordController,
+                        decoration: InputDecoration(
+                            prefixIcon: Icon(
+                              Icons.password_outlined,
+                            ),
+                            hintText: "Password",
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.deepPurple),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            fillColor: Colors.grey[200],
+                            filled: true),
+                        obscureText: true,
+                        obscuringCharacter: "*",
                       ),
                     ),
                     sbh10,

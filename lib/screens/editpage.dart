@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:exactus_task/common/color.dart';
 import 'package:exactus_task/common/sizedbox.dart';
+import 'package:exactus_task/common/textstyles.dart';
 import 'package:exactus_task/connect/url.dart';
 import 'package:exactus_task/screens/homepage.dart';
 import 'package:exactus_task/validation/validators.dart';
@@ -78,9 +80,18 @@ class _EditPageState extends State<EditPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Edit",
+            style: acme,
+          ),
+        ),
         body: Container(
           height: double.infinity,
           width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: lightlinear,
+          ),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

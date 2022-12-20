@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:exactus_task/common/color.dart';
+import 'package:exactus_task/common/textstyles.dart';
 import 'package:exactus_task/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
@@ -40,9 +42,9 @@ class _AddEmployeeState extends State<AddEmployee> {
       if (result == "success") {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => HomePage()));
-        snackbar(Text("Added Successful"), Colors.green);
+        snackbar(Text("Updated Successful"), Colors.green);
       } else {
-        snackbar(Text("Couldn't Add"), Colors.red);
+        snackbar(Text("Couldn't update"), Colors.red);
       }
     }
   }
@@ -51,13 +53,22 @@ class _AddEmployeeState extends State<AddEmployee> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+            title: Text(
+          "Add",
+          style: acme,
+        )),
         body: Container(
           height: double.infinity,
           width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: lightlinear,
+          ),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                sbh60,
                 Form(
                   key: formkey,
                   child: Column(children: [

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+const sbh5 = SizedBox(
+  height: 5,
+);
 const sbh7 = SizedBox(
   height: 7,
 );
@@ -18,6 +21,9 @@ const sbh30 = SizedBox(
 const sbh40 = SizedBox(
   height: 40,
 );
+const sbh60 = SizedBox(
+  height: 60,
+);
 const sbh80 = SizedBox(
   height: 80,
 );
@@ -29,6 +35,9 @@ const sbw10 = SizedBox(
 );
 const sbw15 = SizedBox(
   width: 15,
+);
+const sbw25 = SizedBox(
+  width: 25,
 );
 const sbw75 = SizedBox(
   width: 80,
