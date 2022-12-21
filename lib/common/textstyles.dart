@@ -17,7 +17,7 @@ final poppins = GoogleFonts.poppins(
 // );
 final address = TextStyle(
   fontSize: 18,
-  color: grey300,
+  color: Colors.blueGrey,
 );
 const detail = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
 const edit =

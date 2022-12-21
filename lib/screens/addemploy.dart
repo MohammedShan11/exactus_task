@@ -42,9 +42,9 @@ class _AddEmployeeState extends State<AddEmployee> {
       if (result == "success") {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => HomePage()));
-        snackbar(Text("Updated Successful"), Colors.green);
+        snackbar("Added Successfully", Colors.green);
       } else {
-        snackbar(Text("Couldn't update"), Colors.red);
+        snackbar("Couldn't Add", Colors.red);
       }
     }
   }

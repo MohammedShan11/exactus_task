@@ -175,7 +175,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: TextFormField(
-                            keyboardType: TextInputType.text,
+                            keyboardType: TextInputType.number,
                             validator: (value) {
                               return Validate.numberValidator(value!);
                             },
@@ -202,7 +202,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: TextFormField(
-                            keyboardType: TextInputType.text,
+                            keyboardType: TextInputType.number,
                             validator: (value) {
                               return Validate.passwordValidator(value!);
                             },
@@ -244,11 +244,11 @@ class _RegisterPageState extends State<RegisterPage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => LoginPage()));
-                                  snackbar(Text("Registration Successful"),
+                                  snackbar("Registration Successful",
                                       Colors.green);
                                 } else {
                                   snackbar(
-                                      Text("Registration Failed"), Colors.red);
+                                      "Registration Failed", Colors.red);
                                 }
                               },
                               child: const Center(

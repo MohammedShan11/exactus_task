@@ -54,11 +54,11 @@ class _EditPageState extends State<EditPage> {
       print(result);
       if (result == "success") {
         setState(() {});
-        snackbar('Added Successful', Colors.green);
+        snackbar('Updated Successful', Colors.green);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => HomePage()));
       } else {
-        snackbar("Couldn't Add", Colors.red);
+        snackbar("Couldn't Update", Colors.red);
       }
     }
   }

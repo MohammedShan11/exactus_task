@@ -1,3 +1,4 @@
 import 'package:flutter/material.dart';
 
-const url = 'http://192.168.1.11/exactus/';
+const url = 'https://decisive-legends.000webhostapp.com/';
+//'http://192.168.1.40/exactus/';
