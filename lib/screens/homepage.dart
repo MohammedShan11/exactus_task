@@ -40,8 +40,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
         appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 36, 97, 211),
           title: Text(
             "HomePage",
             style: acme,
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(8.0),
                 child: IconButton(
                   onPressed: () {
-                    Navigator.push(context,
+                    Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => LoginPage()));
                   },
                   icon: Icon(Icons.logout),
@@ -80,6 +80,8 @@ class _HomePageState extends State<HomePage> {
                             return Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Card(
+                                shadowColor: Color.fromARGB(255, 58, 54, 44),
+                                elevation: 5,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(10),
@@ -98,9 +100,12 @@ class _HomePageState extends State<HomePage> {
                                       children: [
                                         Container(
                                           height: 80,
-                                          width: 100,
+                                          width: 120,
                                           child: Image.network(
-                                              'https://cdn1.iconfinder.com/data/icons/business-office-41/64/x-09-512.png'),
+                                            'https://cdn1.iconfinder.com/data/icons/business-office-41/64/x-09-512.png',
+                                            color:
+                                                Color.fromARGB(255, 97, 78, 20),
+                                          ),
                                         ),
                                         sbw15,
                                         Column(
@@ -198,8 +203,8 @@ class _HomePageState extends State<HomePage> {
                                                                     )));
                                                   },
                                                   child: Container(
-                                                    width: 150,
-                                                    height: 50,
+                                                    width: 100,
+                                                    height: 35,
                                                     decoration: BoxDecoration(
                                                         borderRadius:
                                                             BorderRadius.only(
@@ -221,15 +226,15 @@ class _HomePageState extends State<HomePage> {
                                                 sbw10,
                                                 InkWell(
                                                   onTap: () {
-                                                    dataindex = snapshot
-                                                        .data![index]['id'];
                                                     setState(() {
+                                                      dataindex = snapshot
+                                                          .data![index]['id'];
                                                       delData();
                                                     });
                                                   },
                                                   child: Container(
                                                     width: 50,
-                                                    height: 50,
+                                                    height: 35,
                                                     decoration: BoxDecoration(
                                                         borderRadius:
                                                             BorderRadius.only(
@@ -240,7 +245,7 @@ class _HomePageState extends State<HomePage> {
                                                               Radius.circular(
                                                                   10),
                                                         ),
-                                                        color: greycolor),
+                                                        gradient: cyanlinear),
                                                     child: Icon(
                                                       Icons.delete_outline,
                                                       color: redcolor,
@@ -261,10 +266,13 @@ class _HomePageState extends State<HomePage> {
                             );
                           });
                     } else {
-                      return Center(
-                          child: CircularProgressIndicator(
-                        color: bluecolor,
-                      ));
+                      return Container(
+                        height: MediaQuery.of(context).size.height,
+                        child: Center(
+                            child: CircularProgressIndicator(
+                          color: bluecolor,
+                        )),
+                      );
                     }
                   },
                 ),
@@ -273,6 +281,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: appbar,
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => AddEmployee()));

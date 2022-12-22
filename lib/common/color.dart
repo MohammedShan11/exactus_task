@@ -18,7 +18,10 @@ const violetlinear =
     LinearGradient(colors: [Color(0xFFE304C5), Color(0xFFCC73DC)]);
 const bluelinear = LinearGradient(colors: [bluecolor, Color(0xFF7D97C3)]);
 const greenlinear = LinearGradient(colors: [greencolor, Color(0xFF6CD887)]);
-const lightlinear =
-    LinearGradient(colors: [Color(0xffc5edf4), Color(0xfff5d6e5)]);
-const cyanlinear =
-    LinearGradient(colors: [Colors.greenAccent, Colors.cyanAccent]);
+const lightlinear = LinearGradient(
+    colors: [Color(0xffc5edf4), Color(0xfff5d6e5)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight);
+const cyanlinear = LinearGradient(
+    colors: [Color.fromARGB(255, 75, 122, 250), Colors.cyanAccent]);
+final appbar = Color.fromARGB(255, 36, 97, 211);

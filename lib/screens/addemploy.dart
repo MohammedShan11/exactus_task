@@ -54,10 +54,11 @@ class _AddEmployeeState extends State<AddEmployee> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+            backgroundColor: appbar,
             title: Text(
-          "Add",
-          style: acme,
-        )),
+              "Add",
+              style: acme,
+            )),
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -74,8 +75,7 @@ class _AddEmployeeState extends State<AddEmployee> {
                   child: Column(children: [
                     Text(
                       "Add Employee",
-                      style:
-                          TextStyle(fontSize: 52, fontWeight: FontWeight.bold),
+                      style: heading,
                     ),
                     sbh40,
                     Padding(
@@ -186,7 +186,7 @@ class _AddEmployeeState extends State<AddEmployee> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextFormField(
-                        keyboardType: TextInputType.text,
+                        keyboardType: TextInputType.number,
                         validator: (value) {
                           return Validate.numberValidator(value!);
                         },
@@ -214,7 +214,7 @@ class _AddEmployeeState extends State<AddEmployee> {
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          gradient: cyanlinear,
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: InkWell(

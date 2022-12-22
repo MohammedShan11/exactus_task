@@ -46,8 +46,8 @@ class _RegisterPageState extends State<RegisterPage> {
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-          gradient: lightlinear,
-        ),
+            gradient: lightlinear,
+          ),
           child: SingleChildScrollView(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -233,7 +233,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           child: Container(
                             padding: EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                              color: Colors.deepPurple,
+                              gradient: cyanlinear,
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: InkWell(
@@ -244,11 +244,10 @@ class _RegisterPageState extends State<RegisterPage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => LoginPage()));
-                                  snackbar("Registration Successful",
-                                      Colors.green);
-                                } else {
                                   snackbar(
-                                      "Registration Failed", Colors.red);
+                                      "Registration Successful", Colors.green);
+                                } else {
+                                  snackbar("Registration Failed", Colors.red);
                                 }
                               },
                               child: const Center(
@@ -274,7 +273,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                             InkWell(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => LoginPage()));

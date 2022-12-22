@@ -81,6 +81,7 @@ class _EditPageState extends State<EditPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: appbar,
           title: Text(
             "Edit",
             style: acme,
@@ -102,8 +103,7 @@ class _EditPageState extends State<EditPage> {
                     sbh80,
                     Text(
                       "Edit Details",
-                      style:
-                          TextStyle(fontSize: 52, fontWeight: FontWeight.bold),
+                      style: heading,
                     ),
                     sbh40,
                     Padding(
@@ -242,7 +242,7 @@ class _EditPageState extends State<EditPage> {
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          gradient: cyanlinear,
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: InkWell(

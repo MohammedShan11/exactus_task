@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
       var result = jsonDecode(response.body)["message"];
       print(result);
       if (result == "user successfully logged in") {
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => HomePage()));
         snackbar("Login Successful", Colors.green);
       } else {
@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          gradient: cyanlinear,
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: InkWell(

@@ -6,22 +6,19 @@ import 'color.dart';
 final acme = GoogleFonts.acme(fontSize: 23, fontWeight: FontWeight.bold);
 final poppins = GoogleFonts.poppins(
   fontSize: 25,
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w500,
   color: blackcolor,
 );
+final heading = GoogleFonts.merienda(fontSize: 40, fontWeight: FontWeight.bold);
 
-// const empname = TextStyle(
-//   fontSize: 25,
-//   fontWeight: FontWeight.bold,
-//   color: blackcolor,
-// );
 final address = TextStyle(
   fontSize: 18,
   color: Colors.blueGrey,
 );
 const detail = TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
-const edit =
-    TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: whitecolor);
+final edit = GoogleFonts.merienda(
+    fontSize: 20, fontWeight: FontWeight.bold, color: whitecolor);
+
 const text5 =
     TextStyle(fontSize: 20, color: blackcolor, fontWeight: FontWeight.bold);
 const moodText =
